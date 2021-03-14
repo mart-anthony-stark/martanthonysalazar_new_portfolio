@@ -1,0 +1,122 @@
+@import url('splash.css');
+@import url('keyframes.css');
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+::-webkit-scrollbar{
+  width: 2px;
+  background:black;
+}
+::-webkit-scrollbar-thumb{
+  border-radius: 5px;
+  background:white;
+}
+.logo-m{
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  height: 50px;
+  width: 50px;
+  border: 2px solid turquoise;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+}
+.logo-m a{
+  color: white;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+.wrapper{
+  height: 100vh;
+  overflow: hidden;
+}
+/* -----------HERO PAGE--------------- */
+.main{
+  min-height: 100vh;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  color: white;
+}
+.main .logo{
+
+  position: relative;
+  font-size: 3.2em;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: 400;
+}
+.main .logo::before{
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left:0;
+  width: 0%;
+  height: 100%;
+  color: white;
+  border-right: 2px solid white;
+  overflow: hidden;
+  animation: typing 5s linear infinite;
+}
+.main .desc span::before{
+  content: '';
+  animation: changeText infinite 10s;
+  color: turquoise;
+}
+/* -----------ABOUT ME----------------------- */
+.profile{
+  min-height: 100vh;
+  max-width: 100%;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.profile .about{
+  font-size: 2em;
+  font-weight: 400;
+  color: turquoise;
+  padding: 5px;
+  border-bottom: 2px solid white;
+  border-radius: 0 0 10px 10px;
+  margin-bottom: 20px;
+}
+.profile img{
+  max-width: 200px;
+  height: 250px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+.profile .description{
+  padding: 10px;
+  max-width: 400px;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+}
+/* ----------RESPONSIVE LAYOUT--------------- */
+@media (max-width: 730px) {
+  .splash-screen .text1{
+    font-size: 40px;
+  }
+}
+@media (max-width: 480px){
+  .main .logo{
+    font-size: 2.3em;
+  }
+}
+@media (max-width: 378px){
+  .main .logo{
+    font-size: 1.3em;
+  }
+}

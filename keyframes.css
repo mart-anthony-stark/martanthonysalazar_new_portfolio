@@ -1,0 +1,36 @@
+
+@keyframes typing{
+  15%,20%,25%,60%,30%,70%,40%,80%{
+    border:none;
+  }
+  16%,21%,26%,61%,31%,71%,41%,81%{
+    border-right: 2px solid white;
+  }
+  0%,10%,100%{
+    width:0%;
+  }
+  70%,90%{
+    width: 100%;
+  }
+}
+
+@keyframes changeText{
+  0%{
+    content: 'Web Developer';
+  }
+  20%{
+    content: 'Web Developer';
+  }
+  40%{
+    content: 'Backend Developer';
+  }
+  60%{
+    content: 'Web Designer';
+  }
+  80%{
+    content: 'Graphic Designer';
+  }
+  100%{
+    content: 'Javascript Enthusiast';
+  }
+}
