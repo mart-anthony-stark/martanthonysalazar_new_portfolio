@@ -1,10 +1,12 @@
 @import url('splash.css');
 @import url('keyframes.css');
+@import url('sidebar.css');
 *{
   padding:0;
   margin:0;
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
 }
 ::-webkit-scrollbar{
   width: 2px;
@@ -21,6 +23,7 @@
   height: 50px;
   width: 50px;
   border: 2px solid turquoise;
+  background: #000;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -103,6 +106,119 @@
   color: white;
   border-radius: 10px;
   text-align: center;
+}
+/* ----------SKILL SET -------------------- */
+.skillset{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  min-height: 20vh;
+}
+.icon{
+  height: 80px;
+  width: 80px;
+  margin: 20px;
+  background: white;
+  border: 1px solid turquoise;
+  transition: .2s ease;
+}
+#html{
+  background: url('./assets/icons/html.jpg') no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+#css{
+  background: url('./assets/icons/css.jpg') no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+#express{
+  background: url('./assets/icons/express.png') no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+#js{
+  background: url('./assets/icons/js.png') no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+#mongo{
+  background: url('./assets/icons/mongo.png') no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+#node{
+  background: url('./assets/icons/node.png') no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+#sql{
+  background: url('./assets/icons/sql.png') no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+#vue{
+  background: url('./assets/icons/vue.jpg') no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+.icon:hover{
+  transform: scale(1.2);
+}
+/* ----------PROJECTS SECTION---------------- */
+.projects{
+  min-height: 100vh;
+  background: #000;
+}
+.project-header{
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 130px;
+  font-size: 2em;
+  font-weight: 400;
+  color: turquoise;
+  padding: 5px;
+  border-bottom: 2px solid white;
+  border-radius: 0 0 10px 10px;
+  margin-bottom: 20px;
+}
+.container{
+  position: relative;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+  grid-template-rows: minmax(300px, auto);
+  margin: 40px;
+  grid-auto-flow: dense;
+  grid-gap: 10px;
+  padding: 5px;
+}
+.container .box{
+  background: black;
+  padding:5px;
+}
+.box img{
+  position: relative;
+  max-width: 100%;
+}
+.box:nth-child(1){
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.box:nth-child(2){
+  grid-column: span 1;
+  grid-row: span 1;
+}
+.box:nth-child(3){
+  grid-column: span 1;
+  grid-row: span 1;
+}
+.box:nth-child(4){
+  grid-column: span 4;
+  grid-row: span 1;
 }
 /* ----------RESPONSIVE LAYOUT--------------- */
 @media (max-width: 730px) {

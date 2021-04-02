@@ -1,0 +1,36 @@
+.burger{
+  position: fixed;
+  cursor: pointer;
+  right: 10px;
+  height: 50px;
+  width: 50px;
+  z-index: 99;
+}
+.burger .bar{
+  width: 100%;
+  height: 5px;
+  margin:5px;
+  background: turquoise;
+}
+.sidebar{
+  position: fixed;
+  height: 100vh;
+  width: 300px;
+  background: #fff;
+  margin:0 0 0 100%;
+  /* margin: 0 0 0 calc(100% - 300px); */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 98;
+  transition: .3s ease-in;
+}
+.sidebar a{
+  text-align: center;
+  padding: 25px 0;
+  color: turquoise;
+
+}
+.sidebar a:hover{
+  background: #000;
+}
