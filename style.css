@@ -170,12 +170,14 @@
 /* ----------PROJECTS SECTION---------------- */
 .projects{
   min-height: 100vh;
+  width: 100%;
   background: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .project-header{
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
   width: 130px;
   font-size: 2em;
   font-weight: 400;
@@ -185,42 +187,42 @@
   border-radius: 0 0 10px 10px;
   margin-bottom: 20px;
 }
-.container{
-  position: relative;
-  max-width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
-  grid-template-rows: minmax(300px, auto);
-  margin: 40px;
-  grid-auto-flow: dense;
-  grid-gap: 10px;
-  padding: 5px;
+.projects .container{
+  min-height: calc(100vh - 60px);
+  width: 100%;
 }
-.container .box{
-  background: black;
-  padding:5px;
+.projects .container .responsive{
+  cursor: pointer;
+  padding: 0 20px;
+  float: left;
+  width: 25%;
 }
-.box img{
-  position: relative;
-  max-width: 100%;
+.projects .container .responsive .gallery{
+  border: 1px solid #ccc;
+  width: 100%;
+  overflow: hidden;
 }
-.box:nth-child(1){
-  grid-column: span 2;
-  grid-row: span 2;
+.projects .container .responsive .gallery img{
+  width: 100%;
+  height: auto;
+  transition: 1s ease-in;
 }
-.box:nth-child(2){
-  grid-column: span 1;
-  grid-row: span 1;
+.projects .container .responsive .gallery img:hover{
+  transform: scale(1.2);
 }
-.box:nth-child(3){
-  grid-column: span 1;
-  grid-row: span 1;
-}
-.box:nth-child(4){
-  grid-column: span 4;
-  grid-row: span 1;
+.projects .container .responsive .gallery .des{
+  padding: 15px;
+  text-align: center;
+  color: white;
 }
 /* ----------RESPONSIVE LAYOUT--------------- */
+@media (max-width: 970px){
+  .projects .container .responsive{
+    width: 50%;
+    margin: 6px 0;
+  }
+}
+
 @media (max-width: 730px) {
   .splash-screen .text1{
     font-size: 40px;
@@ -229,6 +231,9 @@
 @media (max-width: 480px){
   .main .logo{
     font-size: 2.3em;
+  }
+  .projects .container .responsive{
+    width: 100%;
   }
 }
 @media (max-width: 378px){
