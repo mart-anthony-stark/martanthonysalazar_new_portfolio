@@ -1,16 +1,39 @@
 .burger{
-  position: fixed;
-  cursor: pointer;
-  right: 10px;
+  position: relative;
   height: 50px;
   width: 50px;
-  z-index: 99;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .5s ease;
 }
 .burger .bar{
   width: 100%;
   height: 5px;
-  margin:5px;
   background: turquoise;
+  border-radius: 5px;
+  transition: .5s ease;
+}
+.burger .bar::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background: turquoise;
+  border-radius: 5px;
+  transform: translateY(-15px);
+  transition: .5s ease;
+}
+.burger .bar::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background: turquoise;
+  border-radius: 5px;
+  transform: translateY(15px);
+  transition: .5s ease;
 }
 .sidebar{
   position: fixed;
@@ -18,7 +41,6 @@
   width: 300px;
   background: #fff;
   margin:0 0 0 100%;
-  /* margin: 0 0 0 calc(100% - 300px); */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -28,9 +50,21 @@
 .sidebar a{
   text-align: center;
   padding: 25px 0;
-  color: turquoise;
-
+  color: black;
+  font-weight: 700;
+  letter-spacing: 5px;
+  text-decoration: none;
 }
 .sidebar a:hover{
   background: #000;
+  color: white;
+}
+.burger.show .bar{
+  background: transparent;
+}
+.burger.show .bar::before{
+  transform: rotate(45deg);
+}
+.burger.show .bar::after{
+  transform: rotate(-45deg);
 }

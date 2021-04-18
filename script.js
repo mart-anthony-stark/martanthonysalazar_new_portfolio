@@ -45,3 +45,15 @@ links.forEach(link => {
     }
   })
 })
+
+// SCROLL INDICATOR
+window.onscroll = function(){
+  const progressBar = document.querySelector('.progress')
+
+  const position = document.documentElement.scrollTop
+  const calcHeight = document.documentElement.scrollHeight
+  const scroll = position*100/calcHeight
+  
+  progressBar.style.width = scroll + 40 + 'vw'
+  if(position==0)progressBar.style.width = '0'
+}

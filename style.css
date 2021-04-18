@@ -16,10 +16,28 @@
   border-radius: 5px;
   background:white;
 }
-.logo-m{
+.progress{
   position: fixed;
-  top: 5px;
-  left: 5px;
+  background: aqua;
+  height: .4rem;
+  width: 0;
+  top: 0;
+  left: 0;
+  z-index: 101;
+}
+.logo-burger{
+  height: auto;
+  width: 100%;
+  position: fixed;
+  padding: 10px 20px;
+  top: 0;
+  display: flex;
+  background: black;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+.logo-m{
   height: 50px;
   width: 50px;
   border: 2px solid turquoise;
@@ -28,7 +46,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 99;
 }
 .logo-m a{
   color: white;
@@ -68,7 +85,7 @@
   color: white;
   border-right: 2px solid white;
   overflow: hidden;
-  animation: typing 5s linear infinite;
+  animation: typing 4s linear infinite;
 }
 .main .desc span::before{
   content: '';
