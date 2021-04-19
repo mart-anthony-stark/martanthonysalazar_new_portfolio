@@ -13,6 +13,9 @@
     <div class="progress"></div>
     <div class="logo-burger">
     <div class="logo-m"><a href="#">M</a></div>
+    
+    <button class="theme-toggle"><i class="fa fa-sun-o" aria-hidden="true"></i></button>
+
     <div class="burger">
       <div class="bar"></div>
     </div>
@@ -38,15 +41,23 @@
       <h2>Hello there! I'm</h2>
       <h1 class="logo" data-text="Mart_Anthony">Mart<span>_Anthony</span></h1>
       <h2 class="desc">I am a <span></span></h2>
+      <a href="#profile" class="scroll-down">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
       </div>
 
       <div class="profile" id="profile">
-        <h2 class="about" data-aos="fade-left" data-aos-duration="3000">About me</h2>
-        <img src="./assets/profile.jpg" alt="" data-aos="fade-down" data-aos-duration="2000">
-        <div class="description" data-aos="fade-up" data-aos-duration="2000">
-          Hello! I am Mart Anthony A. Salazar. I am currently taking Bachelor of Science in Information Technology. I have a diverse set of skills ranging from web and graphic design, HTML, CSS, JavaScript, all the way to node.js and its frameworks for frontend and backend API. I am very passionate about learning different technologies that I know I can use for my future projects.
+        <h2 class="about">About me</h2>
+        <div class="content">
+          <div class="image">
+            <img src="./assets/profile.png" alt="" data-aos="fade-left" data-aos-duration="2000">
+          </div>
+          <div class="description" data-aos="fade-up" data-aos-duration="2000">
+            Hello! I am Mart Anthony A. Salazar. I am currently taking Bachelor of Science in Information Technology. I   have a diverse set of skills ranging from web and graphic design, HTML, CSS, JavaScript, all the way to   node.js and its frameworks for frontend and backend API. I am very passionate about learning different  technologies that I know I can use for my future projects.
+          </div>
         </div>
-
       </div>
       <div class="skillset" id="skills">
         <div class="icon" title="HTML" id="html"></div>
@@ -59,7 +70,7 @@
         <div class="icon" title="EXPRESS.JS" id="express"></div>
       </div>
       <div class="projects" id="projects">
-        <h2 class="project-header" data-aos="fade-left" data-aos-duration="3000">Projects</h2>
+        <h2 class="project-header">Projects</h2>
         <div class="container">
           <div class="responsive" data-aos="fade-up" data-aos-duration="2000">
             <div class="gallery">
@@ -81,13 +92,6 @@
               <div class="des">Weather App</div>
             </div>
           </div>
-
-          <!-- <div class="responsive" data-aos="fade-up" data-aos-duration="3000">
-            <div class="gallery">
-              <a href="https://jajadavillo.netlify.app/" target="_blank"><img src="./assets/projects/jaja.png" alt=""></a>
-              <div class="des">Website</div>
-            </div>
-          </div> -->
 
           <div class="responsive" data-aos="fade-up" data-aos-duration="3000">
             <div class="gallery">
@@ -122,6 +126,7 @@
     <script>
       AOS.init();
     </script>
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

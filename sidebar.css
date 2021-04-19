@@ -39,7 +39,7 @@
   position: fixed;
   height: 100vh;
   width: 300px;
-  background: #fff;
+  background: var(--secondary-color);
   margin:0 0 0 100%;
   display: flex;
   flex-direction: column;
@@ -50,14 +50,14 @@
 .sidebar a{
   text-align: center;
   padding: 25px 0;
-  color: black;
+  color: var(--primary-color);
   font-weight: 700;
   letter-spacing: 5px;
   text-decoration: none;
 }
 .sidebar a:hover{
-  background: #000;
-  color: white;
+  background: var(--primary-color);
+  color: var(--secondary-color);
 }
 .burger.show .bar{
   background: transparent;

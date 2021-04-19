@@ -1,20 +1,29 @@
 @import url('splash.css');
 @import url('keyframes.css');
 @import url('sidebar.css');
+:root{
+  --primary-color: black;
+  --secondary-color: white;
+}
+.light-theme{
+  --primary-color: white;
+  --secondary-color: black;
+}
 *{
   padding:0;
   margin:0;
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   scroll-behavior: smooth;
+  transition: .5s ease-in-out;
 }
 ::-webkit-scrollbar{
   width: 2px;
-  background:black;
+  background: var(--primary-color);
 }
 ::-webkit-scrollbar-thumb{
   border-radius: 5px;
-  background:white;
+  background: var(--secondary-color);
 }
 .progress{
   position: fixed;
@@ -24,6 +33,7 @@
   top: 0;
   left: 0;
   z-index: 101;
+  transition: 1s ease-in;
 }
 .logo-burger{
   height: auto;
@@ -41,7 +51,7 @@
   height: 50px;
   width: 50px;
   border: 2px solid turquoise;
-  background: #000;
+  background: black;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -51,6 +61,15 @@
   color: white;
   text-decoration: none;
   font-size: 1.5em;
+}
+.theme-toggle{
+  cursor: pointer;
+  font-size: 2rem;
+  color: white;
+  background: none;
+  outline: none;
+  border: none;
+  transition: 1s ease;
 }
 .wrapper{
   height: 100vh;
@@ -63,14 +82,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #000;
-  color: white;
+  background: var(--primary-color);
+  color: var(--secondary-color);
 }
 .main .logo{
 
   position: relative;
   font-size: 3.2em;
-  color: #000;
+  color: var(--primary-color);
   text-transform: uppercase;
   letter-spacing: 5px;
   font-weight: 400;
@@ -82,8 +101,8 @@
   left:0;
   width: 0%;
   height: 100%;
-  color: white;
-  border-right: 2px solid white;
+  color: var(--secondary-color);
+  border-right: 2px solid var(--secondary-color);
   overflow: hidden;
   animation: typing 4s linear infinite;
 }
@@ -92,35 +111,96 @@
   animation: changeText infinite 10s;
   color: turquoise;
 }
+.scroll-down{
+  position: absolute;
+  bottom: 25px;
+  transition: 1s ease-in-out;
+}
+.scroll-down span{
+  display: block;
+  height: 50px;
+  width: 50px;
+  border-right: 2px solid var(--secondary-color);
+  border-bottom: 2px solid var(--secondary-color);
+  margin-top:-25px;
+  transform: rotate(45deg);
+  animation: blink 2s ease-in-out infinite;
+}
+.scroll-down span:nth-child(1){
+  animation-delay: 0s;
+}
+.scroll-down span:nth-child(2){
+  animation-delay: .3s;
+}
+.scroll-down span:nth-child(3){
+  animation-delay: .6s;
+}
 /* -----------ABOUT ME----------------------- */
 .profile{
   min-height: 100vh;
   max-width: 100%;
-  background: #000;
+  background: var(--primary-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .profile .about{
+  position: relative;
   font-size: 2em;
   font-weight: 400;
   color: turquoise;
   padding: 5px;
-  border-bottom: 2px solid white;
-  border-radius: 0 0 10px 10px;
+  border-bottom: 2px solid var(--secondary-color);
+  letter-spacing: 15px;
   margin-bottom: 20px;
+  transform-origin: right;
+  transform: scaleX(0);
+  overflow: hidden;
+}
+.profile .about[data-scroll="in"]{
+  transform: scaleX(1);
+  transition: 1s ease .5s;
+}
+.profile .about::before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: turquoise;
+  transform-origin: left;
+  transition: .5s ease;
+}
+.profile .about[data-scroll="in"]::before{
+  transform: scaleX(0);
+  transition-delay: 1s;
+}
+.profile .content{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+}
+.profile .content > * {
+  margin: 0 25px;
+}
+.profile .image{
+
+}
+.profile .image:hover img{
+  transform: translateX(-15%);
 }
 .profile img{
-  max-width: 200px;
-  height: 250px;
-  border-radius: 10px;
+  max-width: 250px;
+  height: 300px;
   margin-bottom: 25px;
 }
 .profile .description{
   padding: 10px;
   max-width: 400px;
-  color: white;
+  color: var(--secondary-color);
   border-radius: 10px;
   text-align: center;
 }
@@ -130,14 +210,14 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  background: #000;
+  background: var(--primary-color);
   min-height: 20vh;
 }
 .icon{
   height: 80px;
   width: 80px;
   margin: 20px;
-  background: white;
+  background: var(--secondary-color);
   border: 1px solid turquoise;
   transition: .2s ease;
 }
@@ -188,21 +268,41 @@
 .projects{
   min-height: 100vh;
   width: 100%;
-  background: #000;
+  background: var(--primary-color);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 .project-header{
-  width: 130px;
+  position: relative;
   font-size: 2em;
   font-weight: 400;
   color: turquoise;
   padding: 5px;
-  border-bottom: 2px solid white;
-  border-radius: 0 0 10px 10px;
+  border-bottom: 2px solid var(--secondary-color);
+  letter-spacing: 15px;
   margin-bottom: 20px;
+  transform-origin: right;
+  transform: scaleX(0);
+  overflow: hidden;
+}
+.project-header[data-scroll="in"]{
+  transform: scaleX(1);
+  transition: 1s ease .5s;
+}
+.project-header::before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: turquoise;
+  transform-origin: left;
+  transition: .5s ease;
+}
+.project-header[data-scroll="in"]::before{
+  transform: scaleX(0);
+  transition-delay: 1s;
 }
 .projects .container{
   min-height: calc(100vh - 60px);
@@ -213,9 +313,10 @@
   padding: 0 20px;
   float: left;
   width: 25%;
+  margin-top: 3rem;
 }
 .projects .container .responsive .gallery{
-  border: 1px solid #ccc;
+  border: 1px solid var(--secondary-color);
   width: 100%;
   overflow: hidden;
 }
@@ -230,7 +331,7 @@
 .projects .container .responsive .gallery .des{
   padding: 15px;
   text-align: center;
-  color: white;
+  color: var(--secondary-color);
 }
 /* ----------RESPONSIVE LAYOUT--------------- */
 @media (max-width: 970px){

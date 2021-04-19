@@ -11,6 +11,10 @@ setInterval(()=>{
   loader.style.opacity = '0'
 }, 3500)
 
+// SCROLLOUT
+ScrollOut({
+  targets: '.about,.project-header'
+})
 
 // SIDEBAR REACTIVITY
 const burger = document.querySelector('.burger')
@@ -49,11 +53,30 @@ links.forEach(link => {
 // SCROLL INDICATOR
 window.onscroll = function(){
   const progressBar = document.querySelector('.progress')
+  const scrollDown = document.querySelector('.scroll-down')
 
   const position = document.documentElement.scrollTop
   const calcHeight = document.documentElement.scrollHeight
   const scroll = position*100/calcHeight
   
-  progressBar.style.width = scroll + 40 + 'vw'
-  if(position==0)progressBar.style.width = '0'
+  progressBar.style.width = scroll + 20 + 'vw'
+  if(position==0){
+    progressBar.style.width = '0'
+    scrollDown.style.display = "block";
+  }
+  else {
+    scrollDown.style.display = "none";
+  }
 }
+
+// LIGHT/DARK MODE
+const toggle = document.querySelector('.theme-toggle')
+
+toggle.addEventListener('click', ()=>{
+  document.body.classList.toggle('light-theme')
+  if(document.body.classList.contains('light-theme')){
+    toggle.innerHTML = '<i class="fa fa-moon-o" aria-hidden="true"></i>'
+  }else{
+    toggle.innerHTML = '<i class="fa fa-sun-o" aria-hidden="true"></i>'
+  }
+})
