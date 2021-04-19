@@ -46,6 +46,7 @@
   justify-content: space-between;
   align-items: center;
   z-index: 100;
+  transition: 1s ease-in;
 }
 .logo-m{
   height: 50px;
@@ -86,7 +87,6 @@
   color: var(--secondary-color);
 }
 .main .logo{
-
   position: relative;
   font-size: 3.2em;
   color: var(--primary-color);
@@ -122,7 +122,7 @@
   width: 50px;
   border-right: 2px solid var(--secondary-color);
   border-bottom: 2px solid var(--secondary-color);
-  margin-top:-25px;
+  margin-top:-35px;
   transform: rotate(45deg);
   animation: blink 2s ease-in-out infinite;
 }
@@ -181,21 +181,28 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 25px;
+  /* padding: 25px; */
 }
 .profile .content > * {
   margin: 0 25px;
 }
 .profile .image{
-
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
-.profile .image:hover img{
-  transform: translateX(-15%);
+.profile img:nth-child(1){
+  max-width: 350px;
+  height: 350px;
+  margin-bottom: 25px;
 }
-.profile img{
+.profile img:nth-child(2){
   max-width: 250px;
   height: 300px;
   margin-bottom: 25px;
+  margin-left: -50%;
 }
 .profile .description{
   padding: 10px;

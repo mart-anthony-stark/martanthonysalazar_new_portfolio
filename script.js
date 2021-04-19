@@ -50,6 +50,23 @@ links.forEach(link => {
   })
 })
 
+
+// var lastScroll = 0;
+// // HEADER SCROLLOUT
+// window.addEventListener('scroll', ()=>{
+//   const navheader = document.querySelector('.logo-burger')
+//   let currentScroll = window.pageYOffset
+//   if(currentScroll > lastScroll) {
+//     navheader.style.margin-top = '-70px'
+//   }
+//   else {
+//     navheader.style.margin-top = '0px'
+//   }
+//   lastScroll = currentScroll
+// })
+  
+
+
 // SCROLL INDICATOR
 window.onscroll = function(){
   const progressBar = document.querySelector('.progress')
@@ -58,7 +75,7 @@ window.onscroll = function(){
   const position = document.documentElement.scrollTop
   const calcHeight = document.documentElement.scrollHeight
   const scroll = position*100/calcHeight
-  
+
   progressBar.style.width = scroll + 20 + 'vw'
   if(position==0){
     progressBar.style.width = '0'
