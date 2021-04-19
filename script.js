@@ -50,24 +50,13 @@ links.forEach(link => {
   })
 })
 
-
-// var lastScroll = 0;
-// // HEADER SCROLLOUT
-// window.addEventListener('scroll', ()=>{
-//   const navheader = document.querySelector('.logo-burger')
-//   let currentScroll = window.pageYOffset
-//   if(currentScroll > lastScroll) {
-//     navheader.style.margin-top = '-70px'
-//   }
-//   else {
-//     navheader.style.margin-top = '0px'
-//   }
-//   lastScroll = currentScroll
-// })
   
 
 
 // SCROLL INDICATOR
+const navheader = document.querySelector('.logo-burger')
+let lastScroll = 0;
+
 window.onscroll = function(){
   const progressBar = document.querySelector('.progress')
   const scrollDown = document.querySelector('.scroll-down')
@@ -84,6 +73,15 @@ window.onscroll = function(){
   else {
     scrollDown.style.display = "none";
   }
+
+  // NAVHEADER SCROLL
+  let currentScroll = window.pageYOffset
+  if(lastScroll < currentScroll){
+    navheader.style.marginTop = "-70px"
+  }else{
+    navheader.style.marginTop = "0px"
+  }
+  lastScroll = currentScroll
 }
 
 // LIGHT/DARK MODE

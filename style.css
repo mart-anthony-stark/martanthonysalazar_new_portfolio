@@ -45,8 +45,8 @@
   background: black;
   justify-content: space-between;
   align-items: center;
-  z-index: 100;
-  transition: 1s ease-in;
+  z-index: 98;
+  transition: .5s ease-in;
 }
 .logo-m{
   height: 50px;
@@ -289,6 +289,7 @@
   padding: 5px;
   border-bottom: 2px solid var(--secondary-color);
   letter-spacing: 15px;
+  margin-top: 20px;
   margin-bottom: 20px;
   transform-origin: right;
   transform: scaleX(0);

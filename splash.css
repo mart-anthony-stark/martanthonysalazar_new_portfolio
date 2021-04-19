@@ -10,7 +10,7 @@
   flex-direction: column;
   background: #000;
   height: 100vh;
-  z-index: 98;
+  z-index: 96;
   overflow: hidden;
   animation: fade 8s 1 3s;
 }
