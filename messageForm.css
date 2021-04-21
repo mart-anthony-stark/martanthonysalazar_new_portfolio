@@ -1,0 +1,39 @@
+.leave-message{
+  color: var(--secondary-color);
+  margin-top: 25px;
+}
+.message-form{
+  max-width: 450px;
+  margin: 25px 0px;
+  padding: 25px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.4);
+  outline: none;
+}
+.message-form input{
+  width: 100%;
+  margin: 15px 0px;
+  border: none;
+  border-bottom: 2px solid turquoise;
+  background: none;
+  color: var(--secondary-color);
+}
+::placeholder{
+  color: var(--secondary-color);
+}
+.message-form textarea{
+  border: 2px solid turquoise;
+  background: none;
+  width: 100%;
+  color: var(--secondary-color);
+  margin: 15px 0px;
+  resize: none;
+}
+.message-form button{
+  cursor: pointer;
+  background: turquoise;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  font-size: 1em;
+}

@@ -16,16 +16,16 @@
 
 @keyframes changeText{
   0%{
-    content: 'Web Developer';
+    content: 'Web Designer';
   }
   20%{
-    content: 'Web Developer';
+    content: 'Web Designer';
   }
   40%{
     content: 'Backend Developer';
   }
   60%{
-    content: 'Web Designer';
+    content: 'UI/UX Developer';
   }
   100%{
     content: 'Graphic Designer';

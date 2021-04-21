@@ -13,7 +13,7 @@ setInterval(()=>{
 
 // SCROLLOUT
 ScrollOut({
-  targets: '.about,.project-header'
+  targets: '.about,.project-header,.contact-header'
 })
 
 // SIDEBAR REACTIVITY
