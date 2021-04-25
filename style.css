@@ -326,7 +326,7 @@
 .projects .container .responsive{
   cursor: pointer;
   padding: 0 20px;
-  float: left;
+  float: right;
   width: 25%;
   margin-top: 3rem;
 }
