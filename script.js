@@ -1,3 +1,5 @@
+
+
 const splashScreen = document.querySelector('.splash-screen')
 const loader = document.querySelector('.splash-screen .loader')
 const wrapper = document.querySelector('.wrapper')
