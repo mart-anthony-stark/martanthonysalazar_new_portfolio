@@ -280,6 +280,7 @@
 }
 /* ----------PROJECTS SECTION---------------- */
 .projects{
+  position: relative;
   min-height: 100vh;
   width: 100%;
   background: var(--primary-color);
@@ -319,35 +320,22 @@
   transform: scaleX(0);
   transition-delay: 1s;
 }
-.projects .container{
-  min-height: calc(100vh - 60px);
+.swiper-container {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 400px;
+}     
+.swiper-slide a img {
+  display: block;
   width: 100%;
 }
-.projects .container .responsive{
-  cursor: pointer;
-  padding: 0 20px;
-  float: right;
-  width: 25%;
-  margin-top: 3rem;
-}
-.projects .container .responsive .gallery{
-  border: 1px solid var(--secondary-color);
-  width: 100%;
-  overflow: hidden;
-}
-.projects .container .responsive .gallery img{
-  width: 100%;
-  height: auto;
-  transition: 1s ease-in;
-}
-.projects .container .responsive .gallery img:hover{
-  transform: scale(1.2);
-}
-.projects .container .responsive .gallery .des{
-  padding: 15px;
-  text-align: center;
-  color: var(--secondary-color);
-}
+
 /* --------- CONTACT US --------------------- */
 .contact{
   position: relative;

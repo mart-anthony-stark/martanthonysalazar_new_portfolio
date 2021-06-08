@@ -25,7 +25,7 @@
       <a href="#">Home</a>
       <a href="#profile">About me</a>
       <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
+      <a href="/projects.html">Projects</a>
       <a href="#contact">Contact</a>
     </div>
 
@@ -71,46 +71,10 @@
         <div class="icon" title="EXPRESS.JS" id="express"></div>
       </div>
       <div class="section projects" id="projects">
-        <h2 class="project-header">Projects</h2>
-        <div class="container">
+        <a href="/projects.html"><h2 class="project-header">Projects</h2></a>
+       
           
-          <div class="responsive" data-aos="fade-up" data-aos-duration="2000">
-            <div class="gallery">
-              <a href="https://covidtracker.sendnodes.repl.co/index.html" target="_blank"><img src="./assets/projects/covidtracker.png" alt=""></a>
-              <div class="des">COVID Tracker</div>
-            </div>
-          </div>
-
-          <div class="responsive" data-aos="fade-up" data-aos-duration="3000">
-            <div class="gallery">
-              <a href="https://shoes-ecommerce.sendnodes.repl.co/" target="_blank"><img src="./assets/projects/ShoeShop.png" alt=""></a>
-              <div class="des">E-commerce Website</div>
-            </div>
-          </div>
-
-          <div class="responsive" data-aos="fade-up" data-aos-duration="2000">
-            <div class="gallery">
-              <a href="https://mart-pizza-web.herokuapp.com/" target="_blank"><img src="./assets/projects/Pizza.png" alt=""></a>
-              <div class="des">Pizza Delivery Web App</div>
-            </div>
-          </div>
-
-          <div class="responsive" data-aos="fade-up" data-aos-duration="2400">
-            <div class="gallery">
-              <a href="https://node-js-news.herokuapp.com/" target="_blank"><img src="./assets/projects/News.png" alt=""></a>
-              <div class="des">News Website</div>
-            </div>
-          </div>
-
-          <div class="responsive" data-aos="fade-up" data-aos-duration="2800">
-            <div class="gallery">
-              <a href="https://weather-app-mart.herokuapp.com/" target="_blank"><img src="./assets/projects/weather.png" alt=""></a>
-              <div class="des">Weather App</div>
-            </div>
-          </div>
-
-
-        </div>
+        
       </div>
 
       <!-- CONTACT US -->
@@ -175,6 +139,29 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+    </script>
+
     <script>
       AOS.init();
     </script>
