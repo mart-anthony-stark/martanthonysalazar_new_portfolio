@@ -3,6 +3,7 @@
 @import url('sidebar.css');
 @import url('messageForm.css');
 @import url('footer.css');
+@import url('project.css');
 :root{
   --primary-color: black;
   --secondary-color: white;
@@ -289,7 +290,7 @@
   align-items: center;
   justify-content: center;
 }
-.project-header{
+h2.project-header{
   position: relative;
   font-size: 2em;
   font-weight: 400;
@@ -302,6 +303,9 @@
   transform-origin: right;
   transform: scaleX(0);
   overflow: hidden;
+}
+a{
+  text-decoration: none;
 }
 .project-header[data-scroll="in"]{
   transform: scaleX(1);

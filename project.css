@@ -1,0 +1,42 @@
+.flex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.proj-link{
+  position: relative;
+}
+.proj-link img{
+  height: 300px;
+  width: 350px;
+}
+.proj-link .desc{
+  position: absolute;
+  bottom: 10px;
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  font-size: 1.5em;
+  opacity: 0;
+  transition: .7s ease;
+}
+.proj-link:hover .desc{
+  opacity: 1;
+}
+.proj-link .overlay{
+  height: 100%;
+  width: 100%;
+  background: aqua;
+  top: 0;
+  left: 0;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  position: absolute;
+  mix-blend-mode: multiply;
+  transition: .7s ease;
+}
+.proj-link:hover .overlay{
+  transform: scaleY(1);
+}
