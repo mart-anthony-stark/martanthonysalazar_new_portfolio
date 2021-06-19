@@ -22,19 +22,23 @@
   opacity: 0;
   transition: .7s ease;
 }
+.proj-link .desc p{
+  font-size: .7em;
+}
 .proj-link:hover .desc{
   opacity: 1;
 }
 .proj-link .overlay{
   height: 100%;
   width: 100%;
-  background: aqua;
+  background: var(--accent);
   top: 0;
   left: 0;
   transform: scaleY(0);
   transform-origin: bottom;
   position: absolute;
-  mix-blend-mode: multiply;
+  /* mix-blend-mode: multiply; */
+  opacity: .8;
   transition: .7s ease;
 }
 .proj-link:hover .overlay{

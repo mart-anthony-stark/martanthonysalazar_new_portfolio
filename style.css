@@ -7,6 +7,7 @@
 :root{
   --primary-color: black;
   --secondary-color: white;
+  --accent: turquoise;
 }
 .light-theme{
   --primary-color: white;
@@ -54,7 +55,7 @@
 .logo-m{
   height: 50px;
   width: 50px;
-  border: 2px solid turquoise;
+  border: 2px solid var(--accent);
   background: black;
   border-radius: 50%;
   display: flex;
@@ -112,7 +113,7 @@
 .main .desc span::before{
   content: '';
   animation: changeText infinite 10s;
-  color: turquoise;
+  color: var(--accent);
 }
 .scroll-down{
   position: absolute;
@@ -152,7 +153,7 @@
   position: relative;
   font-size: 2em;
   font-weight: 400;
-  color: turquoise;
+  color: var(--accent);
   padding: 5px;
   border-bottom: 2px solid var(--secondary-color);
   letter-spacing: 15px;
@@ -170,7 +171,7 @@
   position: absolute;
   height: 100%;
   width: 100%;
-  background: turquoise;
+  background: var(--accent);
   transform-origin: left;
   transition: .5s ease;
 }
@@ -234,7 +235,7 @@
   width: 80px;
   margin: 20px;
   background: var(--secondary-color);
-  border: 1px solid turquoise;
+  border: 1px solid var(--accent);
   transition: .2s ease;
 }
 #html{
@@ -295,7 +296,7 @@ h2.project-header{
   position: relative;
   font-size: 2em;
   font-weight: 400;
-  color: turquoise;
+  color: var(--accent);
   padding: 5px;
   border-bottom: 2px solid var(--secondary-color);
   letter-spacing: 15px;
@@ -317,7 +318,7 @@ a{
   position: absolute;
   height: 100%;
   width: 100%;
-  background: turquoise;
+  background: var(--accent);
   transform-origin: left;
   transition: .5s ease;
 }
@@ -355,7 +356,7 @@ a{
   position: relative;
   font-size: 2em;
   font-weight: 400;
-  color: turquoise;
+  color: var(--accent);
   padding: 5px;
   border-bottom: 2px solid var(--secondary-color);
   letter-spacing: 15px;
@@ -372,7 +373,7 @@ a{
   position: absolute;
   height: 100%;
   width: 100%;
-  background: turquoise;
+  background: var(--accent);
   transform-origin: left;
   transition: 1s ease-in-out;
 }
@@ -400,7 +401,7 @@ a{
 }
 .contact .box i{
   position: relative;
-  color: turquoise;
+  color: var(--accent);
   background: var(--secondary-color);
   font-size: 5em;
 }
