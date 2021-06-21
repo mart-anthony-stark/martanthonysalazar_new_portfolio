@@ -30,7 +30,7 @@
 }
 .text2{
 	font-size: 30px;
-	color: turquoise;
+	color: var(--accent);
 	font-weight:  600;
 	letter-spacing: 8px;
 	margin-bottom:  20px;

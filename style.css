@@ -7,7 +7,7 @@
 :root{
   --primary-color: black;
   --secondary-color: white;
-  --accent: turquoise;
+  --accent: rgb(92, 221, 120);
 }
 .light-theme{
   --primary-color: white;
@@ -31,7 +31,7 @@
 }
 .progress{
   position: fixed;
-  background: aqua;
+  background: var(--accent);
   height: .2rem;
   width: 0;
   top: 0;

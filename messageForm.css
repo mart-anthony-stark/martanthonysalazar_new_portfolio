@@ -14,7 +14,7 @@
   width: 100%;
   margin: 15px 0px;
   border: none;
-  border-bottom: 2px solid turquoise;
+  border-bottom: 2px solid var(--accent);
   background: none;
   color: var(--secondary-color);
 }
@@ -22,7 +22,7 @@
   color: var(--secondary-color);
 }
 .message-form textarea{
-  border: 2px solid turquoise;
+  border: 2px solid var(--accent);
   background: none;
   width: 100%;
   color: var(--secondary-color);
@@ -31,7 +31,7 @@
 }
 .message-form button{
   cursor: pointer;
-  background: turquoise;
+  background: var(--accent);
   width: 100%;
   padding: 10px;
   border: none;

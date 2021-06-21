@@ -23,10 +23,10 @@ hr{
   font-size: 2em;
 }
 .socials h4 span{
-  color: turquoise;
+  color: var(--accent);
 }
 .footer .socials .left .text{
-  border-left: 2px solid turquoise;
+  border-left: 2px solid var(--accent);
   padding-left: 1em;
 }
 .footer .socials .right{
@@ -36,7 +36,7 @@ hr{
 .footer .socials .right a{
   font-size: 2.5em;
   margin: 5px 15px;
-  color: turquoise;
+  color: var(--accent);
 }
 .footer .copyright{
   text-align: center;
