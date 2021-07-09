@@ -9,8 +9,8 @@
   position: relative;
 }
 .proj-link img{
-  height: 300px;
-  width: 350px;
+  height: 250px;
+  width: 300px;
 }
 .proj-link .desc{
   position: absolute;
@@ -38,7 +38,7 @@
   transform-origin: bottom;
   position: absolute;
   /* mix-blend-mode: multiply; */
-  opacity: .8;
+  opacity: .9;
   transition: .7s ease;
 }
 .proj-link:hover .overlay{

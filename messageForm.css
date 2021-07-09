@@ -24,6 +24,7 @@
 .message-form textarea{
   border: 2px solid var(--accent);
   background: none;
+  height: 100px;
   width: 100%;
   color: var(--secondary-color);
   margin: 15px 0px;
@@ -33,7 +34,7 @@
   cursor: pointer;
   background: var(--accent);
   width: 100%;
-  padding: 10px;
+  padding: 5px;
   border: none;
   font-size: 1em;
 }

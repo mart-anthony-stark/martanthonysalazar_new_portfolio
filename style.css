@@ -218,7 +218,7 @@
   max-width: 400px;
   color: var(--secondary-color);
   border-radius: 10px;
-  line-height: 2em;
+  line-height: 1.5em;
   text-align: justify;
 }
 /* ----------SKILL SET -------------------- */
@@ -230,55 +230,13 @@
   background: var(--primary-color);
   min-height: 20vh;
 }
-.icon{
-  height: 80px;
-  width: 80px;
-  margin: 20px;
-  background: var(--secondary-color);
-  border: 1px solid var(--accent);
+svg.iconify{
+  height: 100px;
+  color: var(--secondary-color);
+  width: 100px;
   transition: .2s ease;
 }
-#html{
-  background: url('./assets/icons/html.png') no-repeat;
-  background-size: 100%;
-  background-position: center;
-}
-#css{
-  background: url('./assets/icons/css.png') no-repeat;
-  background-size: 100%;
-  background-position: center;
-}
-#express{
-  background: url('./assets/icons/express.png') no-repeat;
-  background-size: 100%;
-  background-position: center;
-}
-#js{
-  background: url('./assets/icons/js.png') no-repeat;
-  background-size: 100%;
-  background-position: center;
-}
-#mongo{
-  background: url('./assets/icons/mongo.png') no-repeat;
-  background-size: 100%;
-  background-position: center;
-}
-#node{
-  background: url('./assets/icons/node.png') no-repeat;
-  background-size: 100%;
-  background-position: center;
-}
-#sql{
-  background: url('./assets/icons/sql.png') no-repeat;
-  background-size: 100%;
-  background-position: center;
-}
-#vue{
-  background: url('./assets/icons/vue.jpg') no-repeat;
-  background-size: 100%;
-  background-position: center;
-}
-.icon:hover{
+svg.iconify:hover{
   transform: scale(1.2);
 }
 /* ----------PROJECTS SECTION---------------- */
@@ -300,7 +258,7 @@ h2.project-header{
   padding: 5px;
   border-bottom: 2px solid var(--secondary-color);
   letter-spacing: 15px;
-  margin-top: 20px;
+  margin-top: 100px;
   margin-bottom: 20px;
   transform-origin: right;
   transform: scaleX(0);
@@ -363,6 +321,7 @@ a{
   margin-bottom: 20px;
   transform-origin: right;
   transform: scaleX(0);
+  margin: 100px 0 50px 0;
 }
 .contact-header[data-scroll="in"]{
   transform: scaleX(1);

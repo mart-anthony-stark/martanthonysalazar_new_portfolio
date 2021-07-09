@@ -21,7 +21,7 @@
     </div>
     </div>
 
-    <div class="sidebar">
+    <div class="sidebar" id="navbar">
       <a href="#">Home</a>
       <a href="#profile">About me</a>
       <a href="#skills">Skills</a>
@@ -29,7 +29,7 @@
       <a href="#contact">Contact</a>
     </div>
 
-    <div class="splash-screen">
+    <div class="splash-screen" id="welcome-section">
       <span class="text1">Welcome</span> <span class="text3 adjust">to my</span>
       <span class="text2">Portfolio</span>
       <div class="loader"></div>
@@ -40,7 +40,7 @@
       
       <h2>Hello there! I'm</h2>
       <h1 class="logo" data-text="Mart_Anthony">Mart<span>_Anthony</span></h1>
-      <h2 class="desc">I am a <span></span></h2>
+      <h2 class="desc">I am <span></span></h2>
       <a href="#profile" class="scroll-down">
         <span></span>
         <span></span>
@@ -52,25 +52,30 @@
         <h2 class="about">About me</h2>
         <div class="content">
           <div class="image">
-            <div class="svg" data-aos="fade-right" data-aos-duration="2000"></div>
+            <!-- <div class="svg" data-aos="fade-right" data-aos-duration="2000"></div> -->
             <img src="./assets/SALAZAR.png" alt="" data-aos="fade-left" data-aos-duration="2000">
           </div>
           <div class="description" data-aos="fade-up" data-aos-duration="2000">
-            &emsp; Hello! I am <strong>Mart Anthony A. Salazar</strong>. I am currently taking Bachelor of Science in Information Technology. I   have a diverse set of skills ranging from web and graphic design, HTML, CSS, JavaScript, all the way to   node.js and its frameworks for frontend and backend API. I am very passionate about learning different  technologies that I know I can use for my future projects.
+            &emsp; Hello! I am <strong>Mart Anthony A. Salazar</strong>. I am currently taking Bachelor of Science in Information Technology at the University of Camarines Norte. I   have a diverse set of skills ranging from web and graphic design, HTML, CSS, JavaScript, including SEO optimization and all the way to   node.js and its frameworks for frontend and backend API. I am very passionate about learning different  technologies that I know I can use for my future work and projects.
+          </div>
+
+          <div class="description" data-aos="fade-up" data-aos-duration="2000">
+            &emsp; 
           </div>
         </div>
       </div>
       <div class="section skillset" id="skills">
-        <div class="icon" title="HTML" id="html"></div>
-        <div class="icon" title="CSS" id="css"></div>
-        <div class="icon" title="JAVASCRIPT" id="js"></div>
-        <div class="icon" title="MONGO DB" id="mongo"></div>
-        <div class="icon" title="SQL" id="sql"></div>
-        <div class="icon" title="NODE JS" id="node"></div>
-        <div class="icon" title="VUE" id="vue"></div>
-        <div class="icon" title="EXPRESS.JS" id="express"></div>
+        <span class="iconify" data-icon="mdi:language-html5" data-inline="false"></span>
+        <span class="iconify" data-icon="mdi:language-css3" data-inline="false"></span>
+        <span class="iconify" data-icon="mdi:language-javascript" data-inline="false"></span>
+        <span class="iconify" data-icon="mdi:database" data-inline="false"></span>
+        <span class="iconify" data-icon="mdi:leaf" data-inline="false"></span>
+        <span class="iconify" data-icon="mdi:nodejs" data-inline="false"></span>
+        <span class="iconify" data-icon="mdi:vuejs" data-inline="false"></span>
+        <span class="iconify" data-icon="mdi:language-php" data-inline="false"></span>
       </div>
       <div class="section projects" id="projects">
+        <div id="project-tile"></div>
         <a href="/projects.html" id="projects"><h2 class="project-header">Projects</h2></a>
         <div class="flex">
           <a href="https://exomusicplayer.netlify.app/" target="_blank" class="proj-link">
@@ -130,9 +135,6 @@
             </div>
             
           </a>
-          
-
-
         </div>
           
         
@@ -145,13 +147,13 @@
           <div class="box">
             <i class="fa fa-commenting" aria-hidden="true"></i>
             <p class="line">Let's have a chat!</p>
-            <button>Chat Now</button>
+            <a href="https://www.facebook.com/martanthony.abanosalazar/" target="_blank"><button>Chat Now</button></a>
           </div>
 
           <div class="box">
             <i class="fa fa-envelope" aria-hidden="true"></i>
             <p class="line">Email me!</p>
-            <button>Send a mail</button>
+            <a href="mailto: martsalazar0@gmail.com"><button>Send a mail</button></a>
           </div>
 
           <div class="box">
@@ -191,7 +193,7 @@
           </div>
         </div>
         <div class="copyright">
-          &#169;Copyright 2021.<br> All rights reserved.
+          &#169;2021 Mart Anthony Salazar.<br> All rights reserved.
         </div>
       </div>
       <!-- http://fb.me/msg/martanthony.abanosalazar -->
@@ -199,7 +201,7 @@
     </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
