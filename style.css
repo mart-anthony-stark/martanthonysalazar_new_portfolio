@@ -235,9 +235,27 @@ svg.iconify{
   color: var(--secondary-color);
   width: 100px;
   transition: .2s ease;
+  transform: unset !important;
 }
 svg.iconify:hover{
-  transform: scale(1.2);
+  transform: scale(1.2) !important;
+}
+/* tooltip */
+p.tooltip{
+  color: #fff;
+  text-align: center;
+  background: #222;
+  border-radius: 3px;
+  padding: 3px 0;
+  
+  visibility: hidden;
+  opacity: 0;
+  transition: .5s ease;
+}
+.grp:hover p.tooltip{
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(-5px)
 }
 /* ----------PROJECTS SECTION---------------- */
 .projects{
