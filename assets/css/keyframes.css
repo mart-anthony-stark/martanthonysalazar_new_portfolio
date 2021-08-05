@@ -6,7 +6,7 @@
   16%,21%,26%,61%,31%,71%,41%,81%{
     border-right: 2px solid white;
   }
-  0%,10%,100%{
+  0%,10%{
     width:0%;
   }
   70%,90%{
@@ -44,5 +44,14 @@
   }
   100%{
     opacity: 0;
+  }
+}
+
+@keyframes borderBlink{
+  15%,20%,25%,60%,30%,70%,40%,80%{
+    border:none;
+  }
+  16%,21%,26%,61%,31%,71%,41%,81%{
+    border-right: 2px solid white;
   }
 }

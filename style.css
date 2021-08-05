@@ -1,16 +1,16 @@
-@import url('splash.css');
-@import url('keyframes.css');
-@import url('sidebar.css');
-@import url('messageForm.css');
-@import url('footer.css');
-@import url('project.css');
+@import url('./assets/css/splash.css');
+@import url('./assets/css/keyframes.css');
+@import url('./assets/css/sidebar.css');
+@import url('./assets/css/messageForm.css');
+@import url('./assets/css/footer.css');
+@import url('./assets/css/project.css');
 :root{
   --primary-color: black;
-  --secondary-color: white;
-  --accent: rgb(92, 221, 120);
+  --secondary-color: rgb(255, 255, 255);
+  --accent: rgb(94, 70, 180);
 }
 .light-theme{
-  --primary-color: white;
+  --primary-color: rgb(194, 192, 192);
   --secondary-color: black;
 }
 *{
@@ -28,6 +28,9 @@
 ::-webkit-scrollbar-thumb{
   border-radius: 5px;
   background: var(--secondary-color);
+}
+body{
+  background: var(--primary-color);
 }
 .progress{
   position: fixed;
@@ -80,6 +83,12 @@
   height: 100vh;
   overflow: hidden;
 }
+.particles-js-canvas-el{
+  width: 100%;
+  height: 100% !important;
+  position: absolute !important;
+  inset: 0 !important;
+}
 /* -----------HERO PAGE--------------- */
 .main{
   min-height: 100vh;
@@ -87,7 +96,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--primary-color);
   color: var(--secondary-color);
 }
 .main .logo{
@@ -103,12 +111,13 @@
   position: absolute;
   top: 0;
   left:0;
-  width: 0%;
+  width: 100%;
   height: 100%;
   color: var(--secondary-color);
   border-right: 2px solid var(--secondary-color);
   overflow: hidden;
-  animation: typing 4s linear infinite;
+  animation: typing 4s linear 5s 1,
+              borderBlink 4s linear infinite;
 }
 .main .desc span::before{
   content: '';
@@ -143,7 +152,6 @@
 .profile{
   min-height: 100vh;
   max-width: 100%;
-  background: var(--primary-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -227,7 +235,6 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  background: var(--primary-color);
   min-height: 20vh;
 }
 svg.iconify{
@@ -262,7 +269,6 @@ p.tooltip{
   position: relative;
   min-height: 100vh;
   width: 100%;
-  background: var(--primary-color);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -322,7 +328,6 @@ a{
 .contact{
   position: relative;
   min-height: 40vh;
-  background: var(--primary-color);
   display: flex;
   justify-content: center;
   align-items: center;

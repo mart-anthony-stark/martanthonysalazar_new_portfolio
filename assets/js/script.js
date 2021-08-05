@@ -42,7 +42,7 @@ main.addEventListener('click', function(){
   }
 })
 
-console.log(links)
+
 links.forEach(link => {
   link.addEventListener('click', function(){
     if(burger.classList.contains('show')){
