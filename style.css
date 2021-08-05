@@ -128,13 +128,14 @@ body{
   position: absolute;
   bottom: 25px;
   transition: 1s ease-in-out;
+  z-index: 2;
 }
 .scroll-down span{
   display: block;
   height: 50px;
   width: 50px;
-  border-right: 2px solid var(--secondary-color);
-  border-bottom: 2px solid var(--secondary-color);
+  border-right: 2px solid var(--accent);
+  border-bottom: 2px solid var(--accent);
   margin-top:-35px;
   transform: rotate(45deg);
   animation: blink 2s ease-in-out infinite;
