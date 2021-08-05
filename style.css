@@ -47,6 +47,7 @@ body{
   width: 100%;
   position: fixed;
   padding: 10px 20px;
+  padding-right: 80px;
   top: 0;
   display: flex;
   background: black;
@@ -72,7 +73,7 @@ body{
 }
 .theme-toggle{
   cursor: pointer;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: white;
   background: none;
   outline: none;
