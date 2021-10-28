@@ -71,6 +71,18 @@ body{
   text-decoration: none;
   font-size: 1.5em;
 }
+ul#nav-links{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+ul#nav-links a{ 
+  color: #fff;
+  transition: .3s !important;
+}
+ul#nav-links a:hover{
+  color: var(--accent);
+}
 .theme-toggle{
   cursor: pointer;
   font-size: 1.5rem;
@@ -413,6 +425,15 @@ a{
 @media (max-width: 730px) {
   .splash-screen .text1{
     font-size: 40px;
+  }
+}
+@media(max-width: 560px){
+  .burger{
+    display: flex;
+  }
+  ul#nav-links li{
+    display: none;
+    visibility: hidden;
   }
 }
 @media (max-width: 480px){

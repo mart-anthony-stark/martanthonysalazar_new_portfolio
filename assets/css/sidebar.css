@@ -3,7 +3,7 @@
   height: 30px;
   width: 30px;
   cursor: pointer;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   transition: .5s ease;
