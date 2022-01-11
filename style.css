@@ -1,48 +1,48 @@
-@import url('./assets/css/splash.css');
-@import url('./assets/css/keyframes.css');
-@import url('./assets/css/sidebar.css');
-@import url('./assets/css/messageForm.css');
-@import url('./assets/css/footer.css');
-@import url('./assets/css/project.css');
-:root{
+@import url("./assets/css/splash.css");
+@import url("./assets/css/keyframes.css");
+@import url("./assets/css/sidebar.css");
+@import url("./assets/css/messageForm.css");
+@import url("./assets/css/footer.css");
+@import url("./assets/css/project.css");
+:root {
   --primary-color: black;
   --secondary-color: rgb(255, 255, 255);
   --accent: rgb(94, 70, 180);
 }
-.light-theme{
-  --primary-color: rgb(194, 192, 192);
-  --secondary-color: black;
+.light-theme {
+  --primary-color: rgb(241, 241, 241);
+  --secondary-color: rgb(32, 32, 32);
 }
-*{
-  padding:0;
-  margin:0;
+* {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   scroll-behavior: smooth;
-  transition: .5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 2px;
   background: var(--primary-color);
 }
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   border-radius: 5px;
   background: var(--secondary-color);
 }
-body{
+body {
   background: var(--primary-color);
 }
-.progress{
+.progress {
   position: fixed;
   background: var(--accent);
-  height: .2rem;
+  height: 0.2rem;
   width: 0;
   top: 0;
   left: 0;
   z-index: 101;
   transition: 1s ease-in;
 }
-.logo-burger{
+.logo-burger {
   height: auto;
   width: 100%;
   position: fixed;
@@ -54,9 +54,9 @@ body{
   justify-content: space-between;
   align-items: center;
   z-index: 98;
-  transition: .5s ease-in;
+  transition: 0.5s ease-in;
 }
-.logo-m{
+.logo-m {
   height: 50px;
   width: 50px;
   border: 2px solid var(--accent);
@@ -66,24 +66,24 @@ body{
   justify-content: center;
   align-items: center;
 }
-.logo-m a{
+.logo-m a {
   color: white;
   text-decoration: none;
   font-size: 1.5em;
 }
-ul#nav-links{
+ul#nav-links {
   display: flex;
   gap: 20px;
   align-items: center;
 }
-ul#nav-links a{ 
+ul#nav-links a {
   color: #fff;
-  transition: .3s !important;
+  transition: 0.3s !important;
 }
-ul#nav-links a:hover{
+ul#nav-links a:hover {
   color: var(--accent);
 }
-.theme-toggle{
+.theme-toggle {
   cursor: pointer;
   font-size: 1.5rem;
   color: white;
@@ -92,18 +92,18 @@ ul#nav-links a:hover{
   border: none;
   transition: 1s ease;
 }
-.wrapper{
+.wrapper {
   height: 100vh;
   overflow: hidden;
 }
-.particles-js-canvas-el{
+.particles-js-canvas-el {
   width: 100%;
   height: 100% !important;
   position: absolute !important;
   inset: 0 !important;
 }
 /* -----------HERO PAGE--------------- */
-.main{
+.main {
   min-height: 100vh;
   flex-direction: column;
   display: flex;
@@ -111,7 +111,7 @@ ul#nav-links a:hover{
   align-items: center;
   color: var(--secondary-color);
 }
-.main .logo{
+.main .logo {
   position: relative;
   font-size: 3.2em;
   color: var(--primary-color);
@@ -119,51 +119,50 @@ ul#nav-links a:hover{
   letter-spacing: 5px;
   font-weight: 400;
 }
-.main .logo::before{
+.main .logo::before {
   content: attr(data-text);
   position: absolute;
   top: 0;
-  left:0;
+  left: 0;
   width: 100%;
   height: 100%;
   color: var(--secondary-color);
   border-right: 2px solid var(--secondary-color);
   overflow: hidden;
-  animation: typing 4s linear 5s 1,
-              borderBlink 4s linear infinite;
+  animation: typing 4s linear 5s 1, borderBlink 4s linear infinite;
 }
-.main .desc span::before{
-  content: '';
+.main .desc span::before {
+  content: "";
   animation: changeText infinite 10s;
   color: var(--accent);
 }
-.scroll-down{
+.scroll-down {
   position: absolute;
   bottom: 25px;
   transition: 1s ease-in-out;
   z-index: 2;
 }
-.scroll-down span{
+.scroll-down span {
   display: block;
   height: 50px;
   width: 50px;
   border-right: 2px solid var(--accent);
   border-bottom: 2px solid var(--accent);
-  margin-top:-35px;
+  margin-top: -35px;
   transform: rotate(45deg);
   animation: blink 2s ease-in-out infinite;
 }
-.scroll-down span:nth-child(1){
+.scroll-down span:nth-child(1) {
   animation-delay: 0s;
 }
-.scroll-down span:nth-child(2){
-  animation-delay: .3s;
+.scroll-down span:nth-child(2) {
+  animation-delay: 0.3s;
 }
-.scroll-down span:nth-child(3){
-  animation-delay: .6s;
+.scroll-down span:nth-child(3) {
+  animation-delay: 0.6s;
 }
 /* -----------ABOUT ME----------------------- */
-.profile{
+.profile {
   min-height: 100vh;
   max-width: 100%;
   display: flex;
@@ -171,7 +170,7 @@ ul#nav-links a:hover{
   justify-content: center;
   align-items: center;
 }
-.profile .about{
+.profile .about {
   position: relative;
   font-size: 2em;
   font-weight: 400;
@@ -184,24 +183,24 @@ ul#nav-links a:hover{
   transform: scaleX(0);
   overflow: hidden;
 }
-.profile .about[data-scroll="in"]{
+.profile .about[data-scroll="in"] {
   transform: scaleX(1);
-  transition: 1s ease .5s;
+  transition: 1s ease 0.5s;
 }
-.profile .about::before{
-  content: '';
+.profile .about::before {
+  content: "";
   position: absolute;
   height: 100%;
   width: 100%;
   background: var(--accent);
   transform-origin: left;
-  transition: .5s ease;
+  transition: 0.5s ease;
 }
-.profile .about[data-scroll="in"]::before{
+.profile .about[data-scroll="in"]::before {
   transform: scaleX(0);
   transition-delay: 1s;
 }
-.profile .content{
+.profile .content {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -211,14 +210,14 @@ ul#nav-links a:hover{
 .profile .content > * {
   margin: 0 25px;
 }
-.profile .image{
+.profile .image {
   position: relative;
   margin: 50px 0px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.profile .image .svg{
+.profile .image .svg {
   position: absolute;
   top: 0;
   left: 0;
@@ -227,15 +226,15 @@ ul#nav-links a:hover{
   margin-bottom: 25px;
   background: var(--secondary-color);
   clip-path: circle(70% at left);
-  opacity: .8;
+  opacity: 0.8;
   border-radius: 25px;
 }
-.profile img{
+.profile img {
   max-width: 250px;
   height: 300px;
   margin-bottom: 25px;
 }
-.profile .description{
+.profile .description {
   padding: 10px;
   max-width: 600px;
   color: var(--secondary-color);
@@ -244,42 +243,42 @@ ul#nav-links a:hover{
   text-align: justify;
 }
 /* ----------SKILL SET -------------------- */
-.skillset{
+.skillset {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   min-height: 20vh;
 }
-svg.iconify{
+svg.iconify {
   height: 100px;
   color: var(--secondary-color);
   width: 100px;
-  transition: .2s ease;
+  transition: 0.2s ease;
   transform: unset !important;
 }
-svg.iconify:hover{
+svg.iconify:hover {
   transform: scale(1.2) !important;
 }
 /* tooltip */
-p.tooltip{
+p.tooltip {
   color: #fff;
   text-align: center;
   background: #222;
   border-radius: 3px;
   padding: 3px 0;
-  
+
   visibility: hidden;
   opacity: 0;
-  transition: .5s ease;
+  transition: 0.5s ease;
 }
-.grp:hover p.tooltip{
+.grp:hover p.tooltip {
   visibility: visible;
   opacity: 1;
-  transform: translateY(-5px)
+  transform: translateY(-5px);
 }
 /* ----------PROJECTS SECTION---------------- */
-.projects{
+.projects {
   position: relative;
   min-height: 100vh;
   width: 100%;
@@ -288,7 +287,7 @@ p.tooltip{
   align-items: center;
   justify-content: center;
 }
-h2.project-header{
+h2.project-header {
   position: relative;
   font-size: 2em;
   font-weight: 400;
@@ -302,23 +301,23 @@ h2.project-header{
   transform: scaleX(0);
   overflow: hidden;
 }
-a{
+a {
   text-decoration: none;
 }
-.project-header[data-scroll="in"]{
+.project-header[data-scroll="in"] {
   transform: scaleX(1);
-  transition: 1s ease .5s;
+  transition: 1s ease 0.5s;
 }
-.project-header::before{
-  content: '';
+.project-header::before {
+  content: "";
   position: absolute;
   height: 100%;
   width: 100%;
   background: var(--accent);
   transform-origin: left;
-  transition: .5s ease;
+  transition: 0.5s ease;
 }
-.project-header[data-scroll="in"]::before{
+.project-header[data-scroll="in"]::before {
   transform: scaleX(0);
   transition-delay: 1s;
 }
@@ -332,14 +331,14 @@ a{
   background-size: cover;
   width: 300px;
   height: 400px;
-}     
+}
 .swiper-slide a img {
   display: block;
   width: 100%;
 }
 
 /* --------- CONTACT US --------------------- */
-.contact{
+.contact {
   position: relative;
   min-height: 40vh;
   display: flex;
@@ -347,7 +346,7 @@ a{
   align-items: center;
   flex-direction: column;
 }
-.contact-header{
+.contact-header {
   position: relative;
   font-size: 2em;
   font-weight: 400;
@@ -360,12 +359,12 @@ a{
   transform: scaleX(0);
   margin: 100px 0 50px 0;
 }
-.contact-header[data-scroll="in"]{
+.contact-header[data-scroll="in"] {
   transform: scaleX(1);
-  transition: 1s ease .5s;
+  transition: 1s ease 0.5s;
 }
-.contact-header::before{
-  content: '';
+.contact-header::before {
+  content: "";
   position: absolute;
   height: 100%;
   width: 100%;
@@ -373,11 +372,11 @@ a{
   transform-origin: left;
   transition: 1s ease-in-out;
 }
-.contact-header[data-scroll="in"]::before{
+.contact-header[data-scroll="in"]::before {
   transform: scaleX(0);
   transition-delay: 1s;
 }
-.contact .container{
+.contact .container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -385,7 +384,7 @@ a{
   flex-wrap: wrap;
   width: 100%;
 }
-.contact .box{
+.contact .box {
   background: var(--secondary-color);
   height: 200px;
   width: 200px;
@@ -395,18 +394,18 @@ a{
   align-items: center;
   border-radius: 25px;
 }
-.contact .box i{
+.contact .box i {
   position: relative;
   color: var(--accent);
   background: var(--secondary-color);
   font-size: 5em;
 }
-.contact .box .line{
+.contact .box .line {
   color: var(--primary-color);
   font-size: 1em;
   font-weight: 800;
 }
-.contact .container button{
+.contact .container button {
   cursor: pointer;
   padding: 10px;
   background: var(--primary-color);
@@ -415,37 +414,48 @@ a{
   margin-top: 10px;
 }
 /* ----------RESPONSIVE LAYOUT--------------- */
-@media (max-width: 970px){
-  .projects .container .responsive{
+@media (max-width: 970px) {
+  .projects .container .responsive {
     width: 50%;
     margin: 6px 0;
   }
 }
 
 @media (max-width: 730px) {
-  .splash-screen .text1{
+  .splash-screen .text1 {
     font-size: 40px;
   }
 }
-@media(max-width: 560px){
-  .burger{
+@media (max-width: 560px) {
+  .burger {
     display: flex;
   }
-  ul#nav-links li{
+  ul#nav-links li {
     display: none;
     visibility: hidden;
   }
 }
-@media (max-width: 480px){
-  .main .logo{
+@media (max-width: 480px) {
+  .main .logo {
     font-size: 2.3em;
   }
-  .projects .container .responsive{
+  .projects .container .responsive {
     width: 100%;
   }
 }
-@media (max-width: 378px){
-  .main .logo{
+@media (max-width: 378px) {
+  .main .logo {
     font-size: 1.3em;
   }
+}
+#particles-js > canvas {
+  z-index: -1;
+}
+a.github {
+  background: rgb(80, 80, 80);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 15px;
+  font-size: 20px;
 }
